@@ -1,0 +1,13 @@
+$transition-speed: .15s;
+$transition-function: ease-in-out;
+
+$outline: $transition-speed outline $transition-function;
+$transform: $transition-speed transform $transition-function;
+$background-color: $transition-speed background-color $transition-function;
+$color: $transition-speed color $transition-function;
+$opacity: $transition-speed opacity $transition-function;
+$box-shadow: $transition-speed box-shadow $transition-function;
+$border-color: $transition-speed border-color $transition-function;
+$gap: $transition-speed gap $transition-function;
+$top: $transition-speed top $transition-function;
+$all: $transition-speed all $transition-function;
