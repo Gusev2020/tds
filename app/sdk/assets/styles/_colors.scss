@@ -1,0 +1,235 @@
+@use 'sass:color';
+@use 'variables/colors';
+
+/* 
+    Token structure
+        --{scheme}-{name}[-{role}]
+*/
+
+/* 
+    Token hierarchy
+        - Tonica
+        - Primary
+        - Secondary
+        - Outline
+        - Reactions
+*/
+
+:root {
+    /* Static*/
+    --tds-transparent: #{colors.$transparent};
+    --tds-black: #{colors.$black};
+    --tds-white: #{colors.$white};
+    --tds-black-text: #{colors.$black-text};
+    --tds-backdrop: #{rgba(colors.$black, .5)};
+    --tds-box-shadow: #{rgba(colors.$black, .075)};
+
+    /* Black */
+    --tds-black: #{colors.$black-text};
+    --tds-black-primary: #{colors.$white};
+    --tds-black-secondary: #{color.mix(colors.$black-text, colors.$white, 40%)};
+    --tds-black-outline: #{color.mix(colors.$black-text, colors.$black-text, 95%)};
+    --tds-black-outline-strong: #{color.mix(colors.$black-text, colors.$black-text, 90%)};
+    --tds-black-outline-stroke: #{color.mix(colors.$black-text, colors.$white, 80%)};
+    --tds-black-hover: #{color.mix(colors.$black-text, colors.$white, 90%)};
+    --tds-black-press: #{color.mix(colors.$black-text, colors.$white, 95%)};
+    --tds-black-active: #{color.mix(colors.$black-text, colors.$white, 90%)};
+
+    /* Space */
+    --tds-space: #{colors.$white};
+    --tds-space-primary: #{colors.$black-text};
+    --tds-space-secondary: #{color.mix(colors.$black-text, colors.$white, 45%)};
+    --tds-space-outline: #{color.mix(colors.$black-text, colors.$white, 5%)};
+    --tds-space-outline-strong: #{color.mix(colors.$black-text, colors.$white, 10%)};
+    --tds-space-outline-stroke: #{color.mix(colors.$black-text, colors.$white, 30%)};
+    --tds-space-hover: #{color.mix(colors.$black-text, colors.$white, 2%)};
+    --tds-space-press: #{color.mix(colors.$black-text, colors.$white, 3%)};
+    --tds-space-active: #{color.mix(colors.$black-text, colors.$white, 2%)};
+
+    /* Space surface */
+    --tds-space-surface: #{color.mix(colors.$black, colors.$white, 2%)};
+    --tds-space-surface-primary: #{colors.$black-text};
+    --tds-space-surface-secondary: #{color.mix(colors.$black-text, colors.$white, 5%)};
+    --tds-space-surface-outline: #{color.mix(colors.$black, colors.$white, 10%)};
+    --tds-space-surface-outline-strong: #{color.mix(colors.$black, colors.$white, 20%)};
+    --tds-space-surface-outline-stroke: #{color.mix(colors.$black, colors.$white, 30%)};
+    --tds-space-surface-hover: #{color.mix(colors.$black, colors.$white, 4%)};
+    --tds-space-surface-press: #{color.mix(colors.$black, colors.$white, 6%)};
+    --tds-space-surface-active: #{color.mix(colors.$black, colors.$white, 4%)};
+
+    /* Space surface item */
+    --tds-space-surface-item: #{color.mix(colors.$black, colors.$white, 6%)};
+    --tds-space-surface-item-primary: #{colors.$black-text};
+    --tds-space-surface-item-secondary: #{color.mix(colors.$black-text, colors.$white, 50%)};
+    --tds-space-surface-item-outline: #{color.mix(colors.$black, colors.$white, 15%)};
+    --tds-space-surface-item-outline-strong: #{color.mix(colors.$black, colors.$white, 25%)};
+    --tds-space-surface-item-outline-stroke: #{color.mix(colors.$black, colors.$white, 35%)};
+    --tds-space-surface-item-hover: #{color.mix(colors.$black, colors.$white, 10%)};
+    --tds-space-surface-item-press: #{color.mix(colors.$black, colors.$white, 12%)};
+    --tds-space-surface-item-active: #{color.mix(colors.$black, colors.$white, 10%)};
+
+    /* Brand */
+    --tds-brand: #{colors.$brand};
+    --tds-brand-primary: #{colors.$white};
+    --tds-brand-secondary: #{color.mix(colors.$brand, colors.$white, 40%)};
+    --tds-brand-outline: #{color.mix(colors.$brand, colors.$black, 95%)};
+    --tds-brand-outline-strong: #{color.mix(colors.$brand, colors.$black, 90%)};
+    --tds-brand-outline-stroke: #{color.mix(colors.$brand, colors.$white, 80%)};
+    --tds-brand-hover: #{color.mix(colors.$brand, colors.$white, 90%)};
+    --tds-brand-press: #{color.mix(colors.$brand, colors.$white, 95%)};
+    --tds-brand-active: #{color.mix(colors.$brand, colors.$white, 90%)};
+
+    /* Brand surface */
+    --tds-brand-surface: #{color.mix(colors.$brand, colors.$white, 5%)};
+    --tds-brand-surface-primary: #{colors.$black-text};
+    --tds-brand-surface-secondary: #{color.mix(colors.$black-text, colors.$white, 45%)};
+    --tds-brand-surface-outline: #{color.mix(colors.$brand, colors.$white, 10%)};
+    --tds-brand-surface-outline-strong: #{color.mix(colors.$brand, colors.$white, 20%)};
+    --tds-brand-surface-outline-stroke: #{color.mix(colors.$brand, colors.$white, 30%)};
+    --tds-brand-surface-hover: #{color.mix(colors.$brand, colors.$white, 3%)};
+    --tds-brand-surface-press: #{color.mix(colors.$brand, colors.$white, 5%)};
+    --tds-brand-surface-active: #{color.mix(colors.$brand, colors.$white, 3%)};
+
+    /* Brand surface item */
+    --tds-brand-surface-item: #{color.mix(colors.$brand, colors.$white, 90%)};
+    --tds-brand-surface-item-primary: #{colors.$black-text};
+    --tds-brand-surface-item-secondary: #{color.mix(colors.$black-text, colors.$white, 45%)};
+    --tds-brand-surface-item-outline: #{color.mix(colors.$brand, colors.$white, 30%)};
+    --tds-brand-surface-item-outline-strong: #{color.mix(colors.$brand, colors.$white, 40%)};
+    --tds-brand-surface-item-outline-stroke: #{color.mix(colors.$brand, colors.$white, 40%)};
+    --tds-brand-surface-item-hover: #{color.mix(colors.$brand, colors.$white, 10%)};
+    --tds-brand-surface-item-press: #{color.mix(colors.$brand, colors.$white, 15%)};
+    --tds-brand-surface-item-active: #{color.mix(colors.$brand, colors.$white, 10%)};
+
+    /* Action */
+    --tds-action: #{colors.$action};
+    --tds-action-primary: #{colors.$white};
+    --tds-action-secondary: #{color.mix(colors.$action, colors.$white, 40%)};
+    --tds-action-outline: #{color.mix(colors.$action, colors.$black, 95%)};
+    --tds-action-outline-strong: #{color.mix(colors.$action, colors.$black, 90%)};
+    --tds-action-outline-stroke: #{color.mix(colors.$action, colors.$black, 80%)};
+    --tds-action-hover: #{color.mix(colors.$action, colors.$white, 95%)};
+    --tds-action-press: #{color.mix(colors.$action, colors.$white, 90%)};
+    --tds-action-active: #{color.mix(colors.$action, colors.$white, 95%)};
+
+    /* Action surface */
+    --tds-action-surface: #{color.mix(colors.$action, colors.$white, 5%)};
+    --tds-action-surface-primary: #{colors.$black-text};
+    --tds-action-surface-secondary: #{color.mix(colors.$black-text, colors.$action, 45%)};
+    --tds-action-surface-outline: #{color.mix(colors.$action, colors.$white, 10%)};
+    --tds-action-surface-outline-strong: #{color.mix(colors.$action, colors.$white, 20%)};
+    --tds-action-surface-outline-stroke: #{color.mix(colors.$action, colors.$white, 30%)};
+    --tds-action-surface-hover: #{color.mix(colors.$action, colors.$white, 3%)};
+    --tds-action-surface-press: #{color.mix(colors.$action, colors.$white, 5%)};
+    --tds-action-surface-active: #{color.mix(colors.$action, colors.$white, 3%)};
+
+    /* Action surface item */
+    --tds-action-surface-item: #{color.mix(colors.$action, colors.$white, 90%)};
+    --tds-action-surface-item-primary: #{colors.$black-text};
+    --tds-action-surface-item-secondary: #{color.mix(colors.$black-text, colors.$white, 45%)};
+    --tds-action-surface-item-outline: #{color.mix(colors.$action, colors.$white, 30%)};
+    --tds-action-surface-item-outline-strong: #{color.mix(colors.$action, colors.$white, 40%)};
+    --tds-action-surface-item-outline-stroke: #{color.mix(colors.$action, colors.$white, 40%)};
+    --tds-action-surface-item-hover: #{color.mix(colors.$action, colors.$white, 10%)};
+    --tds-action-surface-item-press: #{color.mix(colors.$action, colors.$white, 15%)};
+    --tds-action-surface-item-active: #{color.mix(colors.$action, colors.$white, 10%)};
+
+    /* Danger */
+    --tds-danger: #{colors.$danger};
+    --tds-danger-primary: #{colors.$white};
+    --tds-danger-secondary: #{color.mix(colors.$danger, colors.$white, 40%)};
+    --tds-danger-outline: #{color.mix(colors.$danger, colors.$black, 95%)};
+    --tds-danger-outline-strong: #{color.mix(colors.$danger, colors.$black, 90%)};
+    --tds-danger-outline-stroke: #{color.mix(colors.$danger, colors.$black, 80%)};
+    --tds-danger-hover: #{color.mix(colors.$danger, colors.$white, 90%)};
+    --tds-danger-press: #{color.mix(colors.$danger, colors.$white, 95%)};
+    --tds-danger-active: #{color.mix(colors.$danger, colors.$white, 90%)};
+
+    /* Danger surface */
+    --tds-danger-surface: #{color.mix(colors.$danger, colors.$white, 5%)};
+    --tds-danger-surface-primary: #{colors.$black-text};
+    --tds-danger-surface-secondary: #{color.mix(colors.$black-text, colors.$white, 45%)};
+    --tds-danger-surface-outline: #{color.mix(colors.$danger, colors.$white, 10%)};
+    --tds-danger-surface-outline-strong: #{color.mix(colors.$danger, colors.$white, 20%)};
+    --tds-danger-surface-outline-stroke: #{color.mix(colors.$danger, colors.$white, 30%)};
+    --tds-danger-surface-hover: #{color.mix(colors.$danger, colors.$white, 90%)};
+    --tds-danger-surface-press: #{color.mix(colors.$danger, colors.$white, 95%)};
+    --tds-danger-surface-active: #{color.mix(colors.$danger, colors.$white, 90%)};
+
+    /* Danger surface item */
+    --tds-danger-surface-item: #{color.mix(colors.$danger, colors.$white, 90%)};
+    --tds-danger-surface-item-primary: #{colors.$black-text};
+    --tds-danger-surface-item-secondary: #{color.mix(colors.$black-text, colors.$danger, 45%)};
+    --tds-danger-surface-item-outline: #{color.mix(colors.$danger, colors.$white, 30%)};
+    --tds-danger-surface-item-outline-strong: #{color.mix(colors.$danger, colors.$white, 40%)};
+    --tds-danger-surface-item-outline-stroke: #{color.mix(colors.$danger, colors.$white, 40%)};
+    --tds-danger-surface-item-hover: #{color.mix(colors.$danger, colors.$white, 10%)};
+    --tds-danger-surface-item-press: #{color.mix(colors.$danger, colors.$white, 15%)};
+    --tds-danger-surface-item-active: #{color.mix(colors.$danger, colors.$white, 10%)};
+
+    /* Warning */
+    --tds-warning: #{colors.$warning};
+    --tds-warning-primary: #{colors.$black-text};
+    --tds-warning-secondary: #{color.mix(colors.$black-text, colors.$warning, 40%)};
+    --tds-warning-outline: #{color.mix(colors.$warning, colors.$white, 95%)};
+    --tds-warning-outline-strong: #{color.mix(colors.$warning, colors.$white, 90%)};
+    --tds-warning-outline-stroke: #{color.mix(colors.$black, colors.$warning, 80%)};
+    --tds-warning-hover: #{color.mix(colors.$warning, colors.$white, 95%)};
+    --tds-warning-press: #{color.mix(colors.$warning, colors.$white, 90%)};
+    --tds-warning-active: #{color.mix(colors.$warning, colors.$white, 95%)};
+
+    /* Warning surface */
+    --tds-warning-surface: #{color.mix(colors.$warning, colors.$white, 5%)};
+    --tds-warning-surface-primary: #{colors.$black-text};
+    --tds-warning-surface-secondary: #{color.mix(colors.$black-text, colors.$white, 45%)};
+    --tds-warning-surface-outline: #{color.mix(colors.$warning, colors.$black, 10%)};
+    --tds-warning-surface-outline-strong: #{color.mix(colors.$warning, colors.$black, 50%)};
+    --tds-warning-surface-outline-stroke: #{color.mix(colors.$black, colors.$warning, 30%)};
+    --tds-warning-surface-hover: #{color.mix(colors.$warning, colors.$white, 3%)};
+    --tds-warning-surface-press: #{color.mix(colors.$warning, colors.$white, 5%)};
+    --tds-warning-surface-active: #{color.mix(colors.$warning, colors.$white, 3%)};
+
+    /* Warning surface item */
+    --tds-warning-surface-item: #{color.mix(colors.$warning, colors.$white, 5%)};
+    --tds-warning-surface-item-primary: #{colors.$black-text};
+    --tds-warning-surface-item-secondary: #{color.mix(colors.$black-text, colors.$white, 45%)};
+    --tds-warning-surface-item-outline: #{color.mix(colors.$warning, colors.$black, 10%)};
+    --tds-warning-surface-item-outline-strong: #{color.mix(colors.$warning, colors.$black, 20%)};
+    --tds-warning-surface-item-outline-stroke: #{color.mix(colors.$black, colors.$warning, 30%)};
+    --tds-warning-surface-item-hover: #{color.mix(colors.$warning, colors.$white, 10%)};
+    --tds-warning-surface-item-press: #{color.mix(colors.$warning, colors.$white, 15%)};
+    --tds-warning-surface-item-active: #{color.mix(colors.$warning, colors.$white, 10%)};
+
+    /* Success */
+    --tds-success: #{colors.$success};
+    --tds-success-primary: #{colors.$white};
+    --tds-success-secondary: #{color.mix(colors.$success, colors.$white, 40%)};
+    --tds-success-outline: #{color.mix(colors.$success, colors.$black, 95%)};
+    --tds-success-outline-strong: #{color.mix(colors.$success, colors.$black, 90%)};
+    --tds-success-outline-stroke: #{color.mix(colors.$success, colors.$white, 80%)};
+    --tds-success-hover: #{color.mix(colors.$success, colors.$white, 95%)};
+    --tds-success-press: #{color.mix(colors.$success, colors.$white, 90%)};
+    --tds-success-active: #{color.mix(colors.$success, colors.$white, 95%)};
+
+    /* Success surface */
+    --tds-success-surface: #{color.mix(colors.$success, colors.$white, 5%)};
+    --tds-success-surface-primary: #{colors.$black-text};
+    --tds-success-surface-secondary: #{color.mix(colors.$black-text, colors.$white, 45%)};
+    --tds-success-surface-outline: #{color.mix(colors.$success, colors.$white, 10%)};
+    --tds-success-surface-outline-strong: #{color.mix(colors.$success, colors.$white, 20%)};
+    --tds-success-surface-outline-stroke: #{color.mix(colors.$success, colors.$white, 30%)};
+    --tds-success-surface-hover: #{color.mix(colors.$success, colors.$white, 3%)};
+    --tds-success-surface-press: #{color.mix(colors.$success, colors.$white, 5%)};
+    --tds-success-surface-active: #{color.mix(colors.$success, colors.$white, 3%)};
+
+    /* Success surface item */
+    --tds-success-surface-item: #{color.mix(colors.$success, colors.$white, 95%)};
+    --tds-success-surface-item-primary: #{colors.$black-text};
+    --tds-success-surface-item-secondary: #{color.mix(colors.$black-text, colors.$white, 45%)};
+    --tds-success-surface-item-outline: #{color.mix(colors.$success, colors.$white, 30%)};
+    --tds-success-surface-item-outline-strong: #{color.mix(colors.$success, colors.$white, 40%)};
+    --tds-success-surface-item-outline-stroke: #{color.mix(colors.$success, colors.$white, 40%)};
+    --tds-success-surface-item-hover: #{color.mix(colors.$success, colors.$white, 10%)};
+    --tds-success-surface-item-press: #{color.mix(colors.$success, colors.$white, 15%)};
+    --tds-success-surface-item-active: #{color.mix(colors.$success, colors.$white, 10%)};
+    }
