@@ -1,0 +1,186 @@
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smothing: grayscale;
+}
+
+.fw-100 {
+    font-weight: 100 !important;
+}
+
+.fw-200 {
+    font-weight: 200 !important;
+}
+
+.fw-300 {
+    font-weight: 300 !important;
+}
+
+.fw-400 {
+    font-weight: 400 !important;
+}
+
+.fw-500 {
+    font-weight: 500 !important;
+}
+
+.fw-600 {
+    font-weight: 600 !important;
+}
+
+.fw-700 {
+    font-weight: 700 !important;
+}
+
+.fw-800 {
+    font-weight: 800 !important;
+}
+
+.fw-900 {
+    font-weight: 900 !important;
+}
+
+$font-family: 'Roboto', sans-serif;
+
+/** Display **/
+.display-large {
+    font-family: $font-family;
+    font-size: 38px;
+    line-height: 46px;
+    letter-spacing: -0.25px;
+}
+
+.display-medium {
+    font-family: $font-family;
+    font-size: 34px;
+    line-height: 42px;
+    letter-spacing: 0;
+}
+
+.display-small {
+    font-family: $font-family;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 0;
+}
+
+/** Headline **/
+.headline-large {
+    font-family: $font-family;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0;
+}
+
+.headline-large {
+    font-family: $font-family;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0;
+}
+
+.headline-small {
+    font-family: $font-family;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0;
+}
+
+/** Title **/
+.title-large {
+    font-family: $font-family;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0;
+    font-weight: 500;
+}
+
+.title-medium {
+    font-family: $font-family;
+    font-size: 18px;
+    line-height: 21.5px;
+    letter-spacing: 0.15px;
+    font-weight: 500;
+}
+
+.title-small {
+    font-family: $font-family;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.1px;
+    font-weight: 500;
+}
+
+/** Title **/
+.body-large {
+    font-family: $font-family;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.25px;
+}
+
+.body-medium {
+    font-family: $font-family;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+}
+
+.body-small {
+    font-family: $font-family;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.05px;
+}
+
+/** Label **/
+.label-large {
+    font-family: $font-family;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.05px;
+}
+
+.label-medium {
+    font-family: $font-family;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02px;
+}
+
+.label-small {
+    font-family: $font-family;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
