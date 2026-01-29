@@ -5,39 +5,39 @@ body {
 }
 
 .fw-100 {
-    font-weight: 100 !important;
+    font-weight: 100;
 }
 
 .fw-200 {
-    font-weight: 200 !important;
+    font-weight: 200;
 }
 
 .fw-300 {
-    font-weight: 300 !important;
+    font-weight: 300;
 }
 
 .fw-400 {
-    font-weight: 400 !important;
+    font-weight: 400;
 }
 
 .fw-500 {
-    font-weight: 500 !important;
+    font-weight: 500;
 }
 
 .fw-600 {
-    font-weight: 600 !important;
+    font-weight: 600;
 }
 
 .fw-700 {
-    font-weight: 700 !important;
+    font-weight: 700;
 }
 
 .fw-800 {
-    font-weight: 800 !important;
+    font-weight: 800;
 }
 
 .fw-900 {
-    font-weight: 900 !important;
+    font-weight: 900;
 }
 
 $font-family: 'Roboto', sans-serif;
@@ -72,7 +72,7 @@ $font-family: 'Roboto', sans-serif;
     letter-spacing: 0;
 }
 
-.headline-large {
+.headline-medium {
     font-family: $font-family;
     font-size: 22px;
     line-height: 28px;
@@ -92,7 +92,6 @@ $font-family: 'Roboto', sans-serif;
     font-size: 20px;
     line-height: 24px;
     letter-spacing: 0;
-    font-weight: 500;
 }
 
 .title-medium {
@@ -100,7 +99,6 @@ $font-family: 'Roboto', sans-serif;
     font-size: 18px;
     line-height: 21.5px;
     letter-spacing: 0.15px;
-    font-weight: 500;
 }
 
 .title-small {
@@ -108,7 +106,6 @@ $font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 0.1px;
-    font-weight: 500;
 }
 
 /** Title **/
@@ -154,33 +151,3 @@ $font-family: 'Roboto', sans-serif;
     line-height: 12px;
     letter-spacing: 0.1px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
