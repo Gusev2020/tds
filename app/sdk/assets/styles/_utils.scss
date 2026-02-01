@@ -36,7 +36,7 @@
 
 .disabled {
     cursor: default;
-    opacity: .4;
+    opacity: .4 !important;
     pointer-events: none;
     transition: transitions.$opacity;
 }
