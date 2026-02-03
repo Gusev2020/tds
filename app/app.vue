@@ -1,8 +1,64 @@
 <template>
   <Container
+  :padding="16">
+    <Container
+      :padding="16"
+      fill-color="black"
+      :stroke-width="4"
+      :active="isActive"
+      reaction
+    >
+      <Text
+        text="Title"
+        token="title-large-500"
+        color="black-primary"
+        />
+      <Text
+        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, temporibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, temporibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, temporibus."
+        token="body-large-400"
+        color="black-secondary"
+      />
+    </Container>  
+    <br>
+    <Container
+      :padding="16"
+      fill-color="black-surface"
+      :stroke-width="4"
+    >
+      <Text
+        text="Title"
+        token="title-large-500"
+        color="black-surface-primary"
+        />
+      <Text
+        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, temporibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, temporibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, temporibus."
+        token="body-large-400"
+        color="black-surface-secondary"
+      />
+    </Container>  
+    <br>
+    <Container
+      :padding="16"
+      fill-color="black-surface-item"
+      :stroke-width="4"
+    >
+      <Text
+        text="Title"
+        token="title-large-500"
+        color="black-surface-item-primary"
+        />
+      <Text
+        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, temporibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, temporibus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, temporibus."
+        token="body-large-400"
+        color="black-surface-item-secondary"
+      />
+    </Container>  
+  </Container>
+  <br>
+
+  <Container
     :padding="16"
     fill-color="brand"
-    :active="isActive"
     reaction
   >
     <Text
@@ -39,9 +95,7 @@
     fill-color="action"
     :padding="[8, 12]"
     :border-radius="8"
-    :style="{
-      width: 'fit-content'
-    }"
+    width="hug"
     reaction
     overflow
   >
@@ -57,9 +111,7 @@
     fill-color="black"
     :padding="[8, 12]"
     :border-radius="8"
-    :style="{
-      width: 'fit-content'
-    }"
+    width="hug"
     reaction
     overflow
   >
@@ -75,9 +127,7 @@
     fill-color="brand"
     :padding="[8, 12]"
     :border-radius="8"
-    :style="{
-      width: 'fit-content'
-    }"
+    width="hug"
     reaction
     overflow
   >

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { PropType } from 'vue'
+import type { TextColorToken } from '~/sdk/types/types/ColorToken'
 import { getOpacityPercent, getPercent } from '~/sdk/utils/css'
 
 
@@ -16,12 +17,12 @@ const props = defineProps({
     type: String,
     default: 'body-medium-400'
   },
-  as : {
+  as: {
     type: String as PropType<TTextTag>,
-    default : 'p'
+    default: 'p'
   },
   color: {
-    type: String,
+    type: String as PropType<TextColorToken>,
     default: 'space-primary'
   },
   opacity: {
@@ -46,7 +47,7 @@ const props = defineProps({
   }
 })
 
-const textClass = computed(()=>{
+const textClass = computed(() => {
   const classes: string[] = []
 
   const tokenParts = props.token.split('-')
@@ -56,17 +57,17 @@ const textClass = computed(()=>{
   classes.push(tokenBase)
   classes.push(tokenWeight)
 
-  if(props.truncate) {
+  if (props.truncate) {
     classes.push('truncate')
   }
-  if(props.noselect) {
+  if (props.noselect) {
     classes.push('noselect')
   }
 
   return classes
 })
 
-const textStyle = computed(()=> {
+const textStyle = computed(() => {
   const color = `var(--tds-${props.color})`
   const opacity = getPercent(getOpacityPercent(props.opacity))
 
@@ -80,14 +81,9 @@ const textStyle = computed(()=> {
 </script>
 
 <template>
-    <component
-      :is="as"
-      class="text"
-      :class="textClass"
-      :style="textStyle"
-    >
-        {{ text }}
-    </component>
+  <component :is="as" class="text" :class="textClass" :style="textStyle">
+    {{ text }}
+  </component>
 </template>
 
 <style lang="scss" scoped>

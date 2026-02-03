@@ -2,7 +2,9 @@
 import type { CSSProperties, PropType } from 'vue';
 import type { FillColorToken, OutlineColorToken, ReactionColorToken } from '~/sdk/types/types/ColorToken';
 import type { TCssTulip } from '~/sdk/types/types/Tulip';
-import { getCssTulipRule, getOpacityPercent, getOverflow, getPercent, getPx } from '~/sdk/utils/css';
+import { getCoverBackground, getCssTulipRule, getGrow, getOpacityPercent, getOverflow, getPercent, getPx, getShrink } from '~/sdk/utils/css';
+
+type TContainerSize = 'initial' | 'fill' | 'hug' | number | string
 
 const props = defineProps({
   fillColor: {
@@ -33,12 +35,48 @@ const props = defineProps({
     type: Boolean,
     default: false
   },
+  width: {
+    type: [String, Number] as PropType<TContainerSize>,
+    default: 'initial'
+  },
+  minWidth: {
+    type: Number,
+    default: undefined
+  },
+  maxWidth: {
+    type: Number,
+    default: undefined
+  },
+  height: {
+    type: [String, Number] as PropType<TContainerSize>,
+    default: 'initial'
+  },
+  minHeight: {
+    type: Number,
+    default: undefined
+  },
+  maxHeight: {
+    type: Number,
+    default: undefined
+  },
+  // grow: {
+  //   type: Boolean,
+  //   default: false
+  // },
+  // shrink: {
+  //   type: Boolean,
+  //   default: false
+  // },
   reaction: {
     type: Boolean,
     default: false
   },
   reactionColor: {
-    type: String as PropType<ReactionColorToken>,
+    type: String as PropType<FillColorToken>,
+    default: undefined
+  },
+  backgroundImage: {
+    type: String,
     default: undefined
   },
   active: {
@@ -68,6 +106,45 @@ const containerClass = computed(() => {
   ].filter(Boolean) as string[]
 })
 const containerStyle = computed<CSSProperties>(() => {
+
+  let width = undefined
+
+  if (props.width === 'fill') {
+    width = '100%'
+  } else if (props.width === 'hug') {
+    width = 'fit-content'
+  } else if (props.width === 'initial') {
+    width = undefined
+  } else if (typeof props.width === 'number') {
+    width = getPx(props.width)
+  } else {
+    width = props.width
+  }
+
+  const minWidth = getPx(props.minWidth)
+  const maxWidth = getPx(props.maxWidth)
+
+  let height = undefined
+
+  if (props.height === 'fill') {
+    height = '100%'
+  } else if (props.height === 'hug') {
+    height = 'fit-content'
+  } else if (props.height === 'initial') {
+    height = undefined
+  } else if (typeof props.height === 'number') {
+    height = `${props.height}px`
+  } else {
+    height = props.height
+  }
+
+  const minHeight = getPx(props.minHeight)
+  const maxHeight = getPx(props.maxHeight)
+
+  // const flexGrow = getGrow(props.grow)
+  // const flexShrink = getShrink(props.shrink)
+
+
   const padding = getCssTulipRule(props.padding)
 
   const borderRadius = props.rounded ? '9999px' : getCssTulipRule(props.borderRadius)
@@ -113,16 +190,28 @@ const containerStyle = computed<CSSProperties>(() => {
     ? 'solid'
     : undefined
 
+
+  const background = getCoverBackground(props.backgroundImage)
+
   return {
+    width,
+    maxWidth,
+    minWidth,
+    height,
+    maxHeight,
+    minHeight,
+    // flexGrow,
+    // flexShrink,
+    opacity,
     padding,
     borderRadius,
-    opacity,
     borderWidth,
     borderStyle,
     overflow,
     ...reactionColor,
     ...bg,
-    ...bc
+    ...bc,
+    ...background
   }
 })
 </script>

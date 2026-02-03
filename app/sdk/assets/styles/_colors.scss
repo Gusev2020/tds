@@ -28,34 +28,34 @@
     --tds-black: #{colors.$black-brand};
     --tds-black-primary: #{colors.$white};
     --tds-black-secondary: #{color.mix(colors.$black-brand, colors.$white, 40%)};
-    --tds-black-outline: #{color.mix(colors.$black-brand, colors.$black-brand, 95%)};
-    --tds-black-outline-strong: #{color.mix(colors.$black-brand, colors.$black-brand, 90%)};
+    --tds-black-outline: #{colors.$black-brand};
+    --tds-black-outline-strong: {colors.$black};
     --tds-black-outline-stroke: #{color.mix(colors.$black-brand, colors.$white, 80%)};
     --tds-black-hover: #{color.mix(colors.$black-brand, colors.$white, 90%)};
     --tds-black-press: #{color.mix(colors.$black-brand, colors.$white, 95%)};
     --tds-black-active: #{color.mix(colors.$black-brand, colors.$white, 90%)};
 
     /* Black surface */
-    --tds-black-surface: #{color.mix(colors.$black, colors.$white, 2%)};
+    --tds-black-surface: #{color.mix(colors.$black, colors.$white, 15%)};
     --tds-black-surface-primary: #{colors.$black-brand};
-    --tds-black-surface-secondary: #{color.mix(colors.$black-brand, colors.$white, 5%)};
-    --tds-black-surface-outline: #{color.mix(colors.$black-brand, colors.$white, 10%)};
+    --tds-black-surface-secondary: #{color.mix(colors.$black-brand, colors.$white, 60%)};
+    --tds-black-surface-outline: #{color.mix(colors.$black-brand, colors.$white, 20%)};
     --tds-black-surface-outline-strong: #{color.mix(colors.$black-brand, colors.$white, 20%)};
     --tds-black-surface-outline-stroke: #{color.mix(colors.$black-brand, colors.$white, 30%)};
-    --tds-black-surface-hover: #{color.mix(colors.$black-brand, colors.$white, 4%)};
-    --tds-black-surface-press: #{color.mix(colors.$black-brand, colors.$white, 6%)};
-    --tds-black-surface-active: #{color.mix(colors.$black-brand, colors.$white, 4%)};
+    --tds-black-surface-hover: #{color.mix(colors.$black-brand, colors.$white, 10%)};
+    --tds-black-surface-press: #{color.mix(colors.$black-brand, colors.$white, 12%)};
+    --tds-black-surface-active: #{color.mix(colors.$black-brand, colors.$white, 10%)};
 
     /* Black surface item */
-    --tds-black-surface-item: #{color.mix(colors.$black-brand, colors.$white, 6%)};
+    --tds-black-surface-item: #{color.mix(colors.$black-brand, colors.$white, 30%)};
     --tds-black-surface-item-primary: #{colors.$black-brand};
-    --tds-black-surface-item-secondary: #{color.mix(colors.$black-brand, colors.$white, 50%)};
-    --tds-black-surface-item-outline: #{color.mix(colors.$black-brand, colors.$white, 15%)};
-    --tds-black-surface-item-outline-strong: #{color.mix(colors.$black-brand, colors.$white, 25%)};
-    --tds-black-surface-item-outline-stroke: #{color.mix(colors.$black-brand, colors.$white, 35%)};
-    --tds-black-surface-item-hover: #{color.mix(colors.$black-brand, colors.$white, 10%)};
-    --tds-black-surface-item-press: #{color.mix(colors.$black-brand, colors.$white, 12%)};
-    --tds-black-surface-item-active: #{color.mix(colors.$black-brand, colors.$white, 10%)};
+    --tds-black-surface-item-secondary: #{color.mix(colors.$black-brand, colors.$white, 75%)};
+    --tds-black-surface-item-outline: #{color.mix(colors.$black-brand, colors.$white, 35%)};
+    --tds-black-surface-item-outline-strong: #{color.mix(colors.$black-brand, colors.$white, 40%)};
+    --tds-black-surface-item-outline-stroke: #{color.mix(colors.$black-brand, colors.$white, 45%)};
+    --tds-black-surface-item-hover: #{color.mix(colors.$black-brand, colors.$white, 20%)};
+    --tds-black-surface-item-press: #{color.mix(colors.$black-brand, colors.$white, 25%)};
+    --tds-black-surface-item-active: #{color.mix(colors.$black-brand, colors.$white, 20%)};
 
     /* Space */
     --tds-space: #{colors.$white};
@@ -254,4 +254,4 @@
     --tds-success-surface-item-hover: #{color.mix(colors.$success, colors.$white, 10%)};
     --tds-success-surface-item-press: #{color.mix(colors.$success, colors.$white, 15%)};
     --tds-success-surface-item-active: #{color.mix(colors.$success, colors.$white, 10%)};
-    }
+}
