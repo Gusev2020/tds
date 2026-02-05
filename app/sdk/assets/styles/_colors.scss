@@ -71,7 +71,7 @@
     /* Space surface */
     --tds-space-surface: #{color.mix(colors.$black, colors.$white, 2%)};
     --tds-space-surface-primary: #{colors.$black-brand};
-    --tds-space-surface-secondary: #{color.mix(colors.$black-brand, colors.$white, 5%)};
+    --tds-space-surface-secondary: #{color.mix(colors.$black-brand, colors.$white, 45%)};
     --tds-space-surface-outline: #{color.mix(colors.$black, colors.$white, 10%)};
     --tds-space-surface-outline-strong: #{color.mix(colors.$black, colors.$white, 20%)};
     --tds-space-surface-outline-stroke: #{color.mix(colors.$black, colors.$white, 30%)};

@@ -125,7 +125,6 @@ const containerStyle = computed<CSSProperties>(() => {
   const maxWidth = getPx(props.maxWidth)
 
   let height = undefined
-
   if (props.height === 'fill') {
     height = '100%'
   } else if (props.height === 'hug') {
@@ -133,7 +132,7 @@ const containerStyle = computed<CSSProperties>(() => {
   } else if (props.height === 'initial') {
     height = undefined
   } else if (typeof props.height === 'number') {
-    height = `${props.height}px`
+    height = getPx(props.height)
   } else {
     height = props.height
   }
